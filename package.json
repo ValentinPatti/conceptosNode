@@ -1,0 +1,20 @@
+{
+  "name": "conceptosnodejs",
+  "version": "1.0.0",
+  "description": "Primera practica de backend y endpoints",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["server", "port", "middlewares"],
+  "author": "Valentin Patti",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.5.1",
+      "onFail": "download"
+    }
+  },
+  "type": "module"
+}

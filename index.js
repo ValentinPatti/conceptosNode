@@ -17,6 +17,7 @@ console.log('el primer msj de este backend ')
 //TODO DISEÑAMOS LOS ENDPOINTS
 //http://localhost:3000/api/saludo
 app.get("/api/saludo", (req,res)=>{
+    const vehiculos = ['🏎','🚕','🚓']
     res.json('Bienvenidos a nuestro backend')
 })
 

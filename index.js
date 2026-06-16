@@ -1,6 +1,8 @@
 import express from "express"
 import cors from "cors"
 import morgan from "morgan"
+import { fileURLToPath } from 'url'
+import { dirname } from "path"
 
 const app = express()
 const PORT = 3000
@@ -9,6 +11,10 @@ const PORT = 3000
 app.use(cors()) //permite conexiones remotas
 app.use(express.json()) //permite interpretar los datos que lleguen en la solicitud o request en formato json
 app.use(morgan('dev')) //nos muestra cuando nos hacen cualquier tipo de solicitud y el codigo de respuesta
+const __dirname = dirname(fileURLToPath(import.meta.url))
+console.log(__dirname + '/public')
+// configurar un archivo estatico como pagina principal
+app.use(express.static(__dirname + '/public')) //ayuda a cargar un archivo estatico
 
 //todo AREA DE LOGICA
 console.log('el primer msj de este backend ')
